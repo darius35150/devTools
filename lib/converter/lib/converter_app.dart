@@ -15,6 +15,8 @@ class ConverterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        initialRoute: "/converter",
+        title: "Model To Dto Converter",
         theme: ThemeData(
           scaffoldBackgroundColor: globalColor,
           useMaterial3: true

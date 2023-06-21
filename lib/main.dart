@@ -17,6 +17,7 @@ class DevToolsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: "/home",
       title: 'Dev Tools',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

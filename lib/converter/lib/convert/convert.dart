@@ -21,7 +21,7 @@ class Convert {
          !string.trim().contains(Constants.NOT_NULL) && !string.trim().contains(Constants.ORACLE_TYPE_ATTRIBUTE) &&
          !string.trim().contains(Constants.ORG_SPRING_DATA_ANNOTATION_ID) && !string.trim().contains(Constants.SEQ_GENERATOR) &&
          !string.trim().contains(Constants.TRANSIENT) && !string.trim().contains(Constants.XML_JAVA_TYPE_ADAPTER) &&
-         !string.trim().contains(Constants.XML_TRANSIENT) && !string.trim().contains("name") && 
+         !string.trim().contains(Constants.XML_TRANSIENT) && !string.trim().contains("name = ") && 
          !string.trim().contains("(") && !string.contains(")") && string.isNotEmpty){
 
         newList.add(string.trim());

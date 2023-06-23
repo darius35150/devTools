@@ -32,6 +32,7 @@ class ConverterApp extends StatelessWidget {
             ),),
             actions: [
           IconButton(
+            tooltip: "Home",
             color: Colors.white,
             highlightColor: Colors.amber,
             icon: const Icon(
@@ -45,6 +46,7 @@ class ConverterApp extends StatelessWidget {
             },
           ),
           IconButton(
+            tooltip: "Notes",
             color: Colors.white,
             highlightColor: Colors.amber,
             icon: const Icon(

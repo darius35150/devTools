@@ -17,6 +17,7 @@ class Home extends StatelessWidget {
         ),),
         actions: [
           IconButton(
+            tooltip: "Notes",
             color: Colors.white,
             highlightColor: Colors.amber,
             icon: const Icon(
@@ -30,6 +31,7 @@ class Home extends StatelessWidget {
             },
           ),
           IconButton(
+            tooltip: "Model To Dto Converter",
             color: Colors.white,
             highlightColor: Colors.amber,
             icon: const Icon(

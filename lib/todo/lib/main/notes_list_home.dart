@@ -76,6 +76,7 @@ class _NotesListHome extends State<NotesListHome> {
             ),),
             actions: [
           IconButton(
+            tooltip: "Home",
             color: Colors.white,
             highlightColor: Colors.amber,
             icon: const Icon(
@@ -89,6 +90,7 @@ class _NotesListHome extends State<NotesListHome> {
             },
           ),
           IconButton(
+            tooltip: "Model To Dto Converter",
             color: Colors.white,
             highlightColor: Colors.amber,
             icon: const Icon(

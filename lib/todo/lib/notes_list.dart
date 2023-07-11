@@ -3,9 +3,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'main/notes_list_home.dart';
 
 void main() async {
-  await Hive.initFlutter();
-
-  await Hive.openBox("items");
 
   runApp(const NotesListApp());
 }

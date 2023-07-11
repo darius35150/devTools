@@ -10,12 +10,12 @@ void main() async {
 
   await Hive.openBox("items");
 
-  if (Platform.isWindows) {
+  runApp(const DevToolsApp());
+  
+    if (Platform.isWindows) {
     DesktopWindow.setFullScreen(false);
     await DesktopWindow.setWindowSize(const Size(1056, 850));
   }
-
-  runApp(const DevToolsApp());
 }
 
 class DevToolsApp extends StatelessWidget {

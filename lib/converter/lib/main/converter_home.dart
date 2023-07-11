@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../convert/convert.dart';
 
 class ConverterHome extends StatefulWidget {
@@ -62,6 +63,11 @@ class _ConverterHome extends State<ConverterHome> {
       outputTexTFormFieldController.clear();
     });
   }
+
+  copyData() async{
+    await Clipboard.setData(ClipboardData(text: outputTexTFormFieldController.text));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -99,7 +105,7 @@ class _ConverterHome extends State<ConverterHome> {
               backgroundColor: const Color.fromARGB(255, 101, 121, 156)
             ),
             onPressed: clearData,
-            child: const Text('Clear',
+            child: const Text('Clear All',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -108,6 +114,7 @@ class _ConverterHome extends State<ConverterHome> {
           ),
         ],
       ),
+      
       Container(
           margin: const EdgeInsets.fromLTRB(0, 75, 0, 0),
           child: TextField(
@@ -115,7 +122,23 @@ class _ConverterHome extends State<ConverterHome> {
               maxLines: 10,
               controller: outputTexTFormFieldController,
               decoration: const InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Converted Dto Code shows here')))
+                  border: OutlineInputBorder(), hintText: 'Converted Dto Code shows here'))),
+      
+      const SizedBox(height: 4,),
+      Row(
+      children: [ 
+        ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 101, 121, 156)
+            ),
+            onPressed: copyData,
+            child: const Text('Copy',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 16
+            ),),
+        )]),
     ]);
   }
 }

@@ -1,11 +1,19 @@
+import 'dart:io';
+
 import './home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:desktop_window/desktop_window.dart';
 
-void main() async{
+void main() async {
   await Hive.initFlutter();
 
   await Hive.openBox("items");
+
+  if (Platform.isWindows) {
+    DesktopWindow.setFullScreen(false);
+    await DesktopWindow.setWindowSize(const Size(1056, 850));
+  }
 
   runApp(const DevToolsApp());
 }

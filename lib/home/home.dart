@@ -46,6 +46,15 @@ class Home extends StatelessWidget {
           )
         ],
       ),
-    );
+      body: const Center (
+        child: Text(
+
+          "Welcome to the Dev Tools Dashboard",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 25,
+        ),
+      )
+    ));
   }
 }

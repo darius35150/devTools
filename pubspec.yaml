@@ -39,6 +39,8 @@ dependencies:
   hive_flutter:
   flutter_bootstrap: ^2.0.0
   desktop_window:
+  flutter_platform_alert:
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

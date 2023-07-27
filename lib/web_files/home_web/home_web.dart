@@ -1,10 +1,11 @@
-import 'package:dev_tools/converter/lib/converter_app.dart';
-import 'package:dev_tools/todo/lib/notes_list.dart';
+import 'package:dev_tools/ms_files/converter/lib/converter_app.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+import 'package:dev_tools/web_files/todo_web/lib/notes_list_web.dart';
 
+class HomeWeb extends StatelessWidget {
+  const HomeWeb({super.key});
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +28,7 @@ class Home extends StatelessWidget {
             iconSize: 30,
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const NotesListApp()));
+                  MaterialPageRoute(builder: (context) => const NotesListAppWeb()));
             },
           ),
           IconButton(

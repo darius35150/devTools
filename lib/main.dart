@@ -1,25 +1,35 @@
 import 'dart:io';
 
-import './home/home.dart';
+import 'package:dev_tools/web_files/home_web/home_web.dart';
+
+import 'ms_files/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:desktop_window/desktop_window.dart';
 
+
 void main() async {
+  bool isWindows;
+  try{
+   isWindows = Platform.isWindows ? true : false;
+  } catch (e){
+    isWindows = false;
+  }
   await Hive.initFlutter();
 
   await Hive.openBox("items");
 
-  runApp(const DevToolsApp());
-  
-    if (Platform.isWindows) {
+  if (isWindows) {
+    runApp(const DevToolsAppWindows());
     DesktopWindow.setFullScreen(false);
     await DesktopWindow.setWindowSize(const Size(1056, 850));
+  } else {
+    runApp(const DevToolsAppWeb());
   }
 }
 
-class DevToolsApp extends StatelessWidget {
-  const DevToolsApp({super.key});
+class DevToolsAppWindows extends StatelessWidget {
+  const DevToolsAppWindows({super.key});
 
   // This widget is the root of your application.
   @override
@@ -33,6 +43,25 @@ class DevToolsApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const Home(),
+    );
+  }
+}
+
+class DevToolsAppWeb extends StatelessWidget {
+  const DevToolsAppWeb({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      initialRoute: "/home",
+      title: 'Dev Tools',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const HomeWeb(),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../app_run/app_runner.dart';
 import '../../home/home.dart';
-import 'package:dev_tools/todo/lib/notes_list.dart';
+import 'package:dev_tools/ms_files/todo/lib/notes_list.dart';
 import 'main/converter_home.dart';
 
 const Color globalColor = Color.fromARGB(255, 252, 252, 252);
@@ -43,6 +44,20 @@ class ConverterApp extends StatelessWidget {
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Home()));
+            },
+          ),
+          IconButton(
+            tooltip: "Apps",
+            color: Colors.white,
+            highlightColor: Colors.amber,
+            icon: const Icon(
+              Icons.apps,
+              size: 30,
+            ),
+            iconSize: 30,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const AppRunner()));
             },
           ),
           IconButton(

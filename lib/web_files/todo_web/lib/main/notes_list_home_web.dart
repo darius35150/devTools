@@ -1,20 +1,20 @@
-import 'package:dev_tools/converter/lib/converter_app.dart';
 import 'package:flutter/material.dart';
-import '../../../home/home.dart';
+import 'package:dev_tools/web_files/converter_web/lib/converter_app_web.dart';
+import '../../../home_web/home_web.dart';
 import '../db/rowitemslist.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 
 // ignore: must_be_immutable
-class NotesListHome extends StatefulWidget {
+class NotesListHomeWeb extends StatefulWidget {
   PageController page = PageController();
 
-  NotesListHome({super.key});
+  NotesListHomeWeb({super.key});
 
   @override
-  State<NotesListHome> createState() => _NotesListHome();
+  State<NotesListHomeWeb> createState() => _NotesListHomeWeb();
 }
 
-class _NotesListHome extends State<NotesListHome> {
+class _NotesListHomeWeb extends State<NotesListHomeWeb> {
   final textFormFieldController = TextEditingController();
   List otherColors = [
     const Color.fromARGB(255, 217, 217, 217),
@@ -75,34 +75,34 @@ class _NotesListHome extends State<NotesListHome> {
               color: Colors.white
             ),),
             actions: [
-          IconButton(
-            tooltip: "Home",
-            color: Colors.white,
-            highlightColor: Colors.amber,
-            icon: const Icon(
-              Icons.home,
-              size: 30,
-            ),
-            iconSize: 30,
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Home()));
-            },
-          ),
-          IconButton(
-            tooltip: "Model To Dto Converter",
-            color: Colors.white,
-            highlightColor: Colors.amber,
-            icon: const Icon(
-              Icons.difference,
-              size: 30,
-            ),
-            iconSize: 30,
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ConverterApp()));
-            },
-          )
+              IconButton(
+                tooltip: "Home",
+                color: Colors.white,
+                highlightColor: Colors.amber,
+                icon: const Icon(
+                  Icons.home,
+                  size: 30,
+                ),
+                iconSize: 30,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const HomeWeb()));
+                },
+              ),
+              IconButton(
+                tooltip: "Model To Dto Converter",
+                color: Colors.white,
+                highlightColor: Colors.amber,
+                icon: const Icon(
+                  Icons.difference,
+                  size: 30,
+                ),
+                iconSize: 30,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const ConverterAppWeb()));
+                },
+              )
         ],
         ),
         body: BootstrapContainer(fluid: false, children: [

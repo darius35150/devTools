@@ -1,6 +1,4 @@
-
 class Constants {
-
   static String ID = '@Id';
   static String COLUMN = '@Column';
   static String JSON_REF = '@JsonManagedReference';
@@ -17,5 +15,12 @@ class Constants {
   static String ORACLE_TYPE_ATTRIBUTE = '@OracleTypeAttribute';
   static String XML_JAVA_TYPE_ADAPTER = 'XmlJavaTypeAdapter';
   static String XML_TRANSIENT = '@XmlTransient';
-  static String ORG_SPRING_DATA_ANNOTATION_ID = '@org.springframework.data.annotation.Id';
+  static String ORG_SPRING_DATA_ANNOTATION_ID =
+      '@org.springframework.data.annotation.Id';
+  static String CASCADE = 'cascade';
+  static String MAPPED_BY = 'mappedBy';
+  static String TARGET_ENTITY = 'targetEntity';
+  static String FETCH = 'fetch';
+  static String ORPHAN_REMOVAL = 'orphanRemoval';
+  static String NAME_EQUALS = 'name = ';
 }

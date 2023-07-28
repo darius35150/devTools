@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:desktop_window/desktop_window.dart';
 import 'package:dev_tools/ms_files/converter/lib/converter_app.dart';
 import 'package:dev_tools/ms_files/todo/lib/notes_list.dart';
+import '../home/home.dart';
 import 'classes/openprograms.dart';
 import 'package:flutter_platform_alert/flutter_platform_alert.dart';
 import 'classes/parm_types.dart';
@@ -111,7 +112,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
               iconSize: 30,
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const AppRunner()));
+                    MaterialPageRoute(builder: (context) => const Home()));
               },
             ),
             IconButton(

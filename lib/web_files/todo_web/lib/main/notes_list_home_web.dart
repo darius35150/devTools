@@ -29,7 +29,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
           barrierDismissible: false,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: const Text('To Do List'),
+              title: const Text('Notes'),
               content: const SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
@@ -70,7 +70,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 101, 121, 156),
-          title: const Text("Notes List",
+          title: const Text("Notes",
             style: TextStyle(
               color: Colors.white
             ),),

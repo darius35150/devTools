@@ -6,13 +6,13 @@ import 'ms_files/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:desktop_window/desktop_window.dart';
-
+import 'package:window_size/window_size.dart';
 
 void main() async {
   bool isWindows;
-  try{
-   isWindows = Platform.isWindows ? true : false;
-  } catch (e){
+  try {
+    isWindows = Platform.isWindows ? true : false;
+  } catch (e) {
     isWindows = false;
   }
   await Hive.initFlutter();
@@ -20,9 +20,10 @@ void main() async {
   await Hive.openBox("items");
 
   if (isWindows) {
+    setWindowTitle("Dev Tools");
     runApp(const DevToolsAppWindows());
     DesktopWindow.setFullScreen(false);
-    await DesktopWindow.setWindowSize(const Size(1056, 850));
+    await DesktopWindow.setWindowSize(const Size(1000, 850));
   } else {
     runApp(const DevToolsAppWeb());
   }

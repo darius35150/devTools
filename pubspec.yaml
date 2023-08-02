@@ -40,7 +40,11 @@ dependencies:
   flutter_bootstrap: ^2.0.0
   desktop_window:
   flutter_platform_alert:
-  
+  window_size:
+    git:
+      url: https://github.com/google/flutter-desktop-embedding.git
+      path: plugins/window_size
+      ref: fd519be1e8398c6b6c2062c2447bac960a71bc02
 dev_dependencies:
   flutter_test:
     sdk: flutter

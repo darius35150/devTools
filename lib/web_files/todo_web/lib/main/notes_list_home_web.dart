@@ -20,6 +20,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
     const Color.fromARGB(255, 217, 217, 217),
     const Color.fromARGB(255, 101, 121, 156)
   ];
+  double buttonElevation = 6;
 
   Future<void> _saveData() async {
     setState(() {
@@ -29,6 +30,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
           barrierDismissible: false,
           builder: (BuildContext context) {
             return AlertDialog(
+              elevation: buttonElevation,
               title: const Text('Notes'),
               content: const SingleChildScrollView(
                 child: ListBody(
@@ -40,10 +42,17 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
               actions: <Widget>[
                 Center(
                     child: ElevatedButton(
-                  child: const Text('Ok'),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
+                      style: ElevatedButton.styleFrom(
+                        elevation: buttonElevation,
+                        backgroundColor: const Color.fromARGB(255, 101, 121, 156)
+                      ),
+                      child: const Text('Ok',
+                      style: TextStyle(
+                        color: Colors.white
+                      ),),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
                 )),
               ],
             );
@@ -132,7 +141,9 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
                     padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            elevation: 15, backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                            elevation: buttonElevation, 
+                            backgroundColor: const Color.fromARGB(255, 101, 121, 156)
+                        ),
                         onPressed: _saveData,
                         child: const Text("Save",
                           style: TextStyle(

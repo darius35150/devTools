@@ -21,6 +21,7 @@ class _NotesListHome extends State<NotesListHome> {
     const Color.fromARGB(255, 217, 217, 217),
     const Color.fromARGB(255, 101, 121, 156)
   ];
+  double buttonElevation = 6;
 
   Future<void> _saveData() async {
     setState(() {
@@ -30,6 +31,7 @@ class _NotesListHome extends State<NotesListHome> {
           barrierDismissible: false,
           builder: (BuildContext context) {
             return AlertDialog(
+              elevation: buttonElevation,
               title: const Text('Notes'),
               content: const SingleChildScrollView(
                 child: ListBody(
@@ -41,7 +43,14 @@ class _NotesListHome extends State<NotesListHome> {
               actions: <Widget>[
                 Center(
                     child: ElevatedButton(
-                  child: const Text('Ok'),
+                  style: ElevatedButton.styleFrom(
+                    elevation: buttonElevation,
+                    backgroundColor: const Color.fromARGB(255, 101, 121, 156)
+                  ),
+                  child: const Text('Ok',
+                  style: TextStyle(
+                    color: Colors.white
+                  ),),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -71,69 +80,70 @@ class _NotesListHome extends State<NotesListHome> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 101, 121, 156),
-          title: const Text("Notes",
-            style: TextStyle(
-              color: Colors.white
-            ),),
-            actions: [
-              IconButton(
-                tooltip: "Home",
-                color: Colors.white,
-                highlightColor: Colors.amber,
-                icon: const Icon(
-                  Icons.home,
-                  size: 30,
-                ),
-                iconSize: 30,
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Home()));
-                },
+          title: const Text(
+            "Notes",
+            style: TextStyle(color: Colors.white),
+          ),
+          actions: [
+            IconButton(
+              tooltip: "Home",
+              color: Colors.white,
+              highlightColor: Colors.amber,
+              icon: const Icon(
+                Icons.home,
+                size: 30,
               ),
-              IconButton(
-                tooltip: "Apps",
-                color: Colors.white,
-                highlightColor: Colors.amber,
-                icon: const Icon(
-                  Icons.apps,
-                  size: 30,
-                ),
-                iconSize: 30,
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const AppRunner()));
-                },
+              iconSize: 30,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Home()));
+              },
+            ),
+            IconButton(
+              tooltip: "Apps",
+              color: Colors.white,
+              highlightColor: Colors.amber,
+              icon: const Icon(
+                Icons.apps,
+                size: 30,
               ),
-              IconButton(
-                tooltip: "Model To Dto Converter",
-                color: Colors.white,
-                highlightColor: Colors.amber,
-                icon: const Icon(
-                  Icons.difference,
-                  size: 30,
-                ),
-                iconSize: 30,
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const ConverterApp()));
-                },
-              )
-        ],
+              iconSize: 30,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const AppRunner()));
+              },
+            ),
+            IconButton(
+              tooltip: "Model To Dto Converter",
+              color: Colors.white,
+              highlightColor: Colors.amber,
+              icon: const Icon(
+                Icons.difference,
+                size: 30,
+              ),
+              iconSize: 30,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ConverterApp()));
+              },
+            )
+          ],
         ),
         body: BootstrapContainer(fluid: false, children: [
-          BootstrapRow(
-            children: [
+          BootstrapRow(children: [
             BootstrapCol(
-              sizes: "col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3",
+                sizes: "col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3",
                 fit: FlexFit.tight,
                 child: Theme(
                     data: Theme.of(context).copyWith(
-                        colorScheme:
-                            const ColorScheme.light(primary: Color.fromARGB(255, 101, 121, 156))),
+                        colorScheme: const ColorScheme.light(
+                            primary: Color.fromARGB(255, 101, 121, 156))),
                     child: TextField(
                       controller: textFormFieldController,
                       style: const TextStyle(fontFamily: "Nunito"),
-                      cursorColor:  const Color.fromARGB(255, 101, 121, 156),
+                      cursorColor: const Color.fromARGB(255, 101, 121, 156),
                       decoration: const InputDecoration(
                           border: UnderlineInputBorder(),
                           labelText: "Enter item name"),
@@ -141,56 +151,59 @@ class _NotesListHome extends State<NotesListHome> {
           ]),
           BootstrapRow(children: [
             BootstrapCol(
-              sizes: "col-5 col-sm-3 col-md-2 col-lg-2 col-xl-2",
-              fit: FlexFit.tight,
+                sizes: "col-5 col-sm-3 col-md-2 col-lg-2 col-xl-2",
+                fit: FlexFit.tight,
                 child: Padding(
                     padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            elevation: 15, backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                            elevation: 15,
+                            backgroundColor:
+                                const Color.fromARGB(255, 101, 121, 156)),
                         onPressed: _saveData,
-                        child: const Text("Save",
-                          style: TextStyle(
-                            color: Colors.white
-                          ),))))
+                        child: const Text(
+                          "Save",
+                          style: TextStyle(color: Colors.white),
+                        ))))
           ]),
-          BootstrapRow(
-            children: [  BootstrapCol(
-              child: Center(
-                  child: Container(
-                      width: 600,
-                      height: 600,
-                      margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
-                      child: ListView.builder(
-                          scrollDirection: Axis.vertical,
-                          itemCount: RowItemsList.getAllItems().length,
-                          itemBuilder: (context, index) {
-                            return Card(
-                                clipBehavior: Clip.antiAliasWithSaveLayer,
-                                elevation: 15,
-                                child: ListTile(
-                                  tileColor: otherColors[index % 2],
-                                  title: Text(RowItemsList.getAllItems()
-                                      .elementAt(index)["itemName"]
-                                      .toString()),
-                                  subtitle: Text(
-                                      "Date Added:   ${RowItemsList.getAllItems().elementAt(index)["date"].toString().substring(0, 10)}"),
-                                  trailing: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      IconButton(
-                                          onPressed: () {
-                                            _deleteData(index);
-                                          },
-                                          icon: const Icon(
-                                            Icons.delete_outline,
-                                            size: 20.0,
-                                            color: Colors.red,
-                                          ))
-                                    ],
-                                  ),
-                                ));
-                          }))))])
+          BootstrapRow(children: [
+            BootstrapCol(
+                child: Center(
+                    child: Container(
+                        width: 600,
+                        height: 600,
+                        margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
+                        child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            itemCount: RowItemsList.getAllItems().length,
+                            itemBuilder: (context, index) {
+                              return Card(
+                                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                                  elevation: 15,
+                                  child: ListTile(
+                                    tileColor: otherColors[index % 2],
+                                    title: Text(RowItemsList.getAllItems()
+                                        .elementAt(index)["itemName"]
+                                        .toString()),
+                                    subtitle: Text(
+                                        "Date Added:   ${RowItemsList.getAllItems().elementAt(index)["date"].toString().substring(0, 10)}"),
+                                    trailing: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        IconButton(
+                                            onPressed: () {
+                                              _deleteData(index);
+                                            },
+                                            icon: const Icon(
+                                              Icons.delete_outline,
+                                              size: 20.0,
+                                              color: Colors.red,
+                                            ))
+                                      ],
+                                    ),
+                                  ));
+                            }))))
+          ])
         ]));
   }
 }

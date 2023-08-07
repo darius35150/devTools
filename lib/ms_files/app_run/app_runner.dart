@@ -43,8 +43,10 @@ class AppRunnerHome extends StatefulWidget {
   State<AppRunnerHome> createState() => _AppRunnerHomeState();
 }
 
-class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateMixin{
+class _AppRunnerHomeState extends State<AppRunnerHome>
+    with TickerProviderStateMixin {
   late AnimationController controller;
+  double buttonElevation = 6;
 
   Future<bool> restartOrShutdown(
       String restartShutdownText, String title) async {
@@ -76,7 +78,6 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
       openApps.openApplications();
     });
   }
-
 
   void showAnimation() {
     controller = AnimationController(
@@ -125,8 +126,10 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
               ),
               iconSize: 30,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const NotesListApp()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const NotesListApp()));
               },
             ),
             IconButton(
@@ -139,11 +142,13 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
               ),
               iconSize: 30,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const ConverterApp()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ConverterApp()));
               },
             )
-        ],
+          ],
         ),
         body: GridView(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -153,7 +158,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameChrome);
                       },
@@ -165,7 +172,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameIntellij);
                       },
@@ -177,7 +186,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameVSCode);
                       },
@@ -189,7 +200,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameOracle);
                       },
@@ -201,7 +214,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameNotepadd);
                       },
@@ -213,7 +228,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameGitHub);
                       },
@@ -225,7 +242,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameTeams);
                       },
@@ -237,7 +256,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNamePostman);
                       },
@@ -249,7 +270,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameBash);
                       },
@@ -261,7 +284,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome> with TickerProviderStateM
                   padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+                          elevation: buttonElevation,
+                          backgroundColor:
+                              const Color.fromARGB(255, 101, 121, 156)),
                       onPressed: () {
                         _openApplication(ParamTypes.appNameDocker);
                       },

@@ -13,6 +13,7 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
   final inputTextFormFieldController = TextEditingController();
   var outputTexTFormFieldController = TextEditingController();
   late Convert convert;
+  double buttonElevation = 6;
 
   convertData() {
     setState(() {
@@ -34,6 +35,7 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
                 Center(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                        elevation: buttonElevation,
                         backgroundColor:const Color.fromARGB(255, 101, 121, 156)
                       ),
                       child: const Text('Ok',
@@ -88,6 +90,7 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
         children: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
+              elevation: buttonElevation,
               backgroundColor:const Color.fromARGB(255, 101, 121, 156)
             ),
             onPressed: convertData,
@@ -102,6 +105,7 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
           ElevatedButton(
           
             style: ElevatedButton.styleFrom(
+              elevation: buttonElevation,
               backgroundColor: const Color.fromARGB(255, 101, 121, 156)
             ),
             onPressed: clearData,
@@ -129,6 +133,7 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
       children: [ 
         ElevatedButton(
             style: ElevatedButton.styleFrom(
+              elevation: buttonElevation,
               backgroundColor: const Color.fromARGB(255, 101, 121, 156)
             ),
             onPressed: copyData,

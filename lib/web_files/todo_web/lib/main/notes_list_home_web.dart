@@ -43,7 +43,8 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
                 Center(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        elevation: buttonElevation
+                        elevation: buttonElevation,
+                        backgroundColor: const Color.fromARGB(255, 101, 121, 156)
                       ),
                       child: const Text('Ok',
                       style: TextStyle(

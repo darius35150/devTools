@@ -105,7 +105,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
                 ),
                 iconSize: 30,
                 onPressed: () {
-                  Navigator.pushNamed(context,"./webconverter");
+                  Navigator.pushNamed(context,"/webconverter");
                 },
               )
         ],

@@ -13,7 +13,7 @@ class NotesListAppWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/notes",
+      initialRoute: "/webnotes",
       title: 'Dev List',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

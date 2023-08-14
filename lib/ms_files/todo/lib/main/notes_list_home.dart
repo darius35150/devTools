@@ -1,7 +1,4 @@
-import 'package:dev_tools/ms_files/converter/lib/converter_app.dart';
 import 'package:flutter/material.dart';
-import '../../../app_run/app_runner.dart';
-import '../../../home/home.dart';
 import '../db/rowitemslist.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 
@@ -95,8 +92,7 @@ class _NotesListHome extends State<NotesListHome> {
               ),
               iconSize: 30,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Home()));
+                Navigator.pushNamed(context, "/home");
               },
             ),
             IconButton(
@@ -109,8 +105,7 @@ class _NotesListHome extends State<NotesListHome> {
               ),
               iconSize: 30,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const AppRunner()));
+                Navigator.pushNamed(context, "/apps");
               },
             ),
             IconButton(
@@ -123,10 +118,7 @@ class _NotesListHome extends State<NotesListHome> {
               ),
               iconSize: 30,
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ConverterApp()));
+                Navigator.pushNamed(context, "/converter");
               },
             )
           ],

@@ -3,10 +3,6 @@ import 'main/converter_home.dart';
 
 const Color globalColor = Color.fromARGB(255, 252, 252, 252);
 
-void main() {
-  runApp(const ConverterApp());
-}
-
 class ConverterApp extends StatelessWidget {
   const ConverterApp({super.key});
 

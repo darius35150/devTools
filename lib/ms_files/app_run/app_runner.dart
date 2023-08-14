@@ -1,35 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:desktop_window/desktop_window.dart';
 import 'classes/openprograms.dart';
 import 'package:flutter_platform_alert/flutter_platform_alert.dart';
 import 'classes/parm_types.dart';
-// import 'package:msix/msix.dart';
+// class AppRunner extends StatelessWidget {
+//   const AppRunner({Key? key}) : super(key: key);
 
-Future<void> main() async {
-  runApp(const AppRunner());
-
-  DesktopWindow.setFullScreen(false);
-  await DesktopWindow.setWindowSize(const Size(570, 650));
-  await DesktopWindow.setMaxWindowSize(const Size(710, 750));
-}
-
-class AppRunner extends StatelessWidget {
-  const AppRunner({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'App Runner',
-      theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.blueGrey,
-      ),
-      home: const AppRunnerHome(title: 'App Runner 2.0'),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'App Runner',
+//       theme: ThemeData(
+//         useMaterial3: true,
+//         primarySwatch: Colors.blueGrey,
+//       ),
+//       home: const AppRunnerHome(title: 'App Runner 2.0'),
+//       debugShowCheckedModeBanner: false,
+//     );
+//   }
+// }
 
 class AppRunnerHome extends StatefulWidget {
   const AppRunnerHome({Key? key, required this.title}) : super(key: key);
@@ -93,6 +82,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 101, 121, 156),
           title: Text(
             widget.title,

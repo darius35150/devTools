@@ -41,7 +41,6 @@ class DevToolsAppWindows extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/home",
       title: 'Dev Tools',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -53,8 +52,9 @@ class DevToolsAppWindows extends StatelessWidget {
         "/home": (context) => const Home(),
         "/notes":(context) => NotesListHome(),
         "/converter":(context) => const ConverterApp(),
-        "/apps":(context) => const AppRunner()
+        "/apps":(context) => const AppRunnerHome(title: 'App Runner 2.0'),
       },
+      initialRoute: "/home",
     );
   }
 }

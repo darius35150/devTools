@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:dev_tools/web_files/converter_web/lib/converter_app_web.dart';
-import '../../../home_web/home_web.dart';
 import '../db/rowitemslist.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 
@@ -94,8 +92,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
                 ),
                 iconSize: 30,
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const HomeWeb()));
+                  Navigator.pushNamed(context,"/webhome");
                 },
               ),
               IconButton(
@@ -108,8 +105,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
                 ),
                 iconSize: 30,
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const ConverterAppWeb()));
+                  Navigator.pushNamed(context,"./webconverter");
                 },
               )
         ],

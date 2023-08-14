@@ -1,6 +1,3 @@
-import 'package:dev_tools/ms_files/app_run/app_runner.dart';
-import 'package:dev_tools/ms_files/converter/lib/converter_app.dart';
-import 'package:dev_tools/ms_files/todo/lib/notes_list.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -27,8 +24,7 @@ class Home extends StatelessWidget {
             ),
             iconSize: 30,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const AppRunner()));
+              Navigator.pushNamed(context, "/apps");
             },
           ),
           IconButton(
@@ -41,8 +37,7 @@ class Home extends StatelessWidget {
             ),
             iconSize: 30,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const NotesListApp()));
+              Navigator.pushNamed(context, "/notes");
             },
           ),
           IconButton(
@@ -55,8 +50,7 @@ class Home extends StatelessWidget {
             ),
             iconSize: 30,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ConverterApp()));
+              Navigator.pushNamed(context, "/converter");
             },
           )
         ],

@@ -120,7 +120,7 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
       ),
       
       Container(
-          margin: const EdgeInsets.fromLTRB(0, 75, 0, 0),
+          margin: const EdgeInsets.fromLTRB(0, 55, 0, 0),
           child: TextField(
               keyboardType: TextInputType.multiline,
               maxLines: 10,

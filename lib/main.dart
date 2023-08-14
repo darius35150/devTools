@@ -1,6 +1,11 @@
 import 'dart:io';
 
+import 'package:dev_tools/ms_files/app_run/app_runner.dart';
+import 'package:dev_tools/ms_files/converter/lib/converter_app.dart';
+import 'package:dev_tools/ms_files/todo/lib/main/notes_list_home.dart';
+import 'package:dev_tools/web_files/converter_web/lib/converter_app_web.dart';
 import 'package:dev_tools/web_files/home_web/home_web.dart';
+import 'package:dev_tools/web_files/todo_web/lib/main/notes_list_home_web.dart';
 
 import 'ms_files/home/home.dart';
 import 'package:flutter/material.dart';
@@ -44,6 +49,12 @@ class DevToolsAppWindows extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const Home(),
+      routes: {
+        "/home": (context) => const Home(),
+        "/notes":(context) => NotesListHome(),
+        "/converter":(context) => const ConverterApp(),
+        "/apps":(context) => const AppRunner()
+      },
     );
   }
 }
@@ -55,7 +66,6 @@ class DevToolsAppWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/home",
       title: 'Dev Tools',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -63,6 +73,12 @@ class DevToolsAppWeb extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomeWeb(),
+      routes: {
+        "/webhome": (context) => const HomeWeb(),
+        "/webnotes":(context) => NotesListHomeWeb(),
+        "/webconverter":(context) => const ConverterAppWeb(),
+      },
+      initialRoute: "/webhome",
     );
   }
 }

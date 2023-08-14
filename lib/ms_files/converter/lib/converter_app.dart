@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../app_run/app_runner.dart';
-import '../../home/home.dart';
-import 'package:dev_tools/ms_files/todo/lib/notes_list.dart';
 import 'main/converter_home.dart';
 
 const Color globalColor = Color.fromARGB(255, 252, 252, 252);
@@ -16,7 +13,6 @@ class ConverterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        initialRoute: "/converter",
         title: "Model To Dto Converter",
         theme: ThemeData(
           scaffoldBackgroundColor: globalColor,
@@ -42,8 +38,7 @@ class ConverterApp extends StatelessWidget {
             ),
             iconSize: 30,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Home()));
+              Navigator.pushNamed(context, "/home");
             },
           ),
           IconButton(
@@ -56,8 +51,7 @@ class ConverterApp extends StatelessWidget {
             ),
             iconSize: 30,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const AppRunner()));
+              Navigator.pushNamed(context, "/apps");
             },
           ),
           IconButton(
@@ -70,8 +64,7 @@ class ConverterApp extends StatelessWidget {
             ),
             iconSize: 30,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const NotesListApp()));
+              Navigator.pushNamed(context, "/notes");
             },
           )
         ],

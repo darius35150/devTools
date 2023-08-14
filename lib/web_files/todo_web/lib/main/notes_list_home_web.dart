@@ -76,6 +76,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 101, 121, 156),
           title: const Text("Notes",
             style: TextStyle(

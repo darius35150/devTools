@@ -20,6 +20,7 @@ class Constants {
   static String XML_JAVA_TYPE_ADAPTER = 'XmlJavaTypeAdapter';
   static String XML_TRANSIENT = '@XmlTransient';
   static String ORG_SPRING_DATA_ANNOTATION_ID = '@org.springframework.data.annotation.Id';
+  static String LOB = '@Lob';
   static String CASCADE = 'cascade';
   static String MAPPED_BY = 'mappedBy';
   static String TARGET_ENTITY = 'targetEntity';

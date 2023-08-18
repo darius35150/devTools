@@ -135,7 +135,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                 crossAxisCount: 4),
             children: [
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -149,7 +149,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -163,7 +163,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -177,7 +177,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -191,7 +191,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -205,7 +205,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -219,7 +219,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -233,7 +233,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -247,7 +247,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,
@@ -261,7 +261,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         style: TextStyle(color: Colors.white),
                       ))),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 65, 15, 25),
+                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           elevation: buttonElevation,

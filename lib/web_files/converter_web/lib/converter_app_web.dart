@@ -3,10 +3,6 @@ import 'main/converter_home_web.dart';
 
 const Color globalColor = Color.fromARGB(255, 252, 252, 252);
 
-void main() {
-  runApp(const ConverterAppWeb());
-}
-
 class ConverterAppWeb extends StatelessWidget {
   const ConverterAppWeb({super.key});
 
@@ -57,6 +53,6 @@ class ConverterAppWeb extends StatelessWidget {
         ],
           ),
           body: const ConverterHomeWeb(),
-        ));
+        ),);
   }
 }

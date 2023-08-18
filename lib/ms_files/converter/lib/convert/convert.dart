@@ -24,7 +24,7 @@ class Convert {
          !string.trim().contains(Constants.XML_TRANSIENT) && !string.trim().contains(Constants.NAME_EQUALS) && 
          !string.trim().contains(Constants.CASCADE) && !string.trim().contains(Constants.MAPPED_BY) &&
          !string.trim().contains(Constants.TARGET_ENTITY) && !string.trim().contains(Constants.FETCH) &&
-         !string.trim().contains(Constants.ORPHAN_REMOVAL) && 
+         !string.trim().contains(Constants.ORPHAN_REMOVAL) && !string.trim().contains(Constants.LOB) &&
          !string.trim().contains("(") && !string.contains(")") && string.isNotEmpty){
 
         newList.add(string.trim());

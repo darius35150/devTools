@@ -4,7 +4,6 @@ import 'package:dev_tools/ms_files/app_run/app_runner.dart';
 import 'package:dev_tools/ms_files/converter/lib/converter_app.dart';
 import 'package:dev_tools/ms_files/todo/lib/main/notes_list_home.dart';
 import 'package:dev_tools/web_files/converter_web/lib/converter_app_web.dart';
-import 'package:dev_tools/web_files/converter_web/lib/main/converter_home_web.dart';
 import 'package:dev_tools/web_files/home_web/home_web.dart';
 import 'package:dev_tools/web_files/todo_web/lib/main/notes_list_home_web.dart';
 
@@ -29,7 +28,7 @@ void main() async {
     setWindowTitle("Dev Tools");
     runApp(const DevToolsAppWindows());
     DesktopWindow.setFullScreen(false);
-    await DesktopWindow.setWindowSize(const Size(1000, 850));
+    await DesktopWindow.setWindowSize(const Size(1050, 850));
   } else {
     runApp(const DevToolsAppWeb());
   }

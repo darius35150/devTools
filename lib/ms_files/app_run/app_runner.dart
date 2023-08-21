@@ -2,23 +2,6 @@ import 'package:flutter/material.dart';
 import 'classes/openprograms.dart';
 import 'package:flutter_platform_alert/flutter_platform_alert.dart';
 import 'classes/parm_types.dart';
-// class AppRunner extends StatelessWidget {
-//   const AppRunner({Key? key}) : super(key: key);
-
-//   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'App Runner',
-//       theme: ThemeData(
-//         useMaterial3: true,
-//         primarySwatch: Colors.blueGrey,
-//       ),
-//       home: const AppRunnerHome(title: 'App Runner 2.0'),
-//       debugShowCheckedModeBanner: false,
-//     );
-//   }
-// }
 
 class AppRunnerHome extends StatefulWidget {
   const AppRunnerHome({Key? key, required this.title}) : super(key: key);
@@ -132,6 +115,7 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
         ),
         body: GridView(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                childAspectRatio: 1.1,
                 crossAxisCount: 4),
             children: [
               Padding(

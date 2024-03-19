@@ -58,7 +58,14 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
       }
     });
   }
+  
+  lowercaseText() {
+    setState(() {
+      outputTexTFormFieldController.text =
+          inputTextFormFieldController.text.toLowerCase();
+    });
 
+  }
   clearData(){
     setState(() {
       inputTextFormFieldController.clear();
@@ -115,6 +122,22 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
               fontWeight: FontWeight.bold,
               fontSize: 16
             ),),
+          ),
+          const SizedBox(
+            width: 8,
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                elevation: buttonElevation,
+                backgroundColor: const Color.fromARGB(255, 101, 121, 156)),
+            onPressed: lowercaseText,
+            child: const Text(
+              'Lowercase',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),
+            ),
           ),
         ],
       ),

@@ -38,7 +38,7 @@ class OpenPrograms {
         break;
       case ParamTypes.appNameTeams:
         Process.run(
-            'C:/Users/da2030/AppData/Local/Microsoft/Teams/Update.exe --processStart "Teams.exe"',
+            'C:/Users/da2030/AppData/Local/Microsoft/Teams/current/Teams.exe',
             []);
         break;
       case ParamTypes.appNamePostman:
@@ -60,7 +60,8 @@ class OpenPrograms {
         Process.run('"C:/Windows/system32/cmd.exe"', [], runInShell: true);
         break;
       case ParamTypes.appNameBash:
-        Process.run('C:/Program Files/Git/git-bash.exe', []);
+        // Process.run('C:/Program Files/Git/git-bash.exe', []);
+        Process.run('C:/Users/da2030/AppData/Local/Programs/Git/git-bash.exe', []);
         break;
       case ParamTypes.appActionRestart:
         Process.run('shutdown -r -t 0 -f', [], runInShell: true);

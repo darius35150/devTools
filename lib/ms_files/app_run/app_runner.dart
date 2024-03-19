@@ -188,20 +188,20 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         ParamTypes.appNameNotepadd,
                         style: TextStyle(color: Colors.white),
                       ))),
-              Padding(
-                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          elevation: buttonElevation,
-                          backgroundColor:
-                              const Color.fromARGB(255, 101, 121, 156)),
-                      onPressed: () {
-                        _openApplication(ParamTypes.appNameGitHub);
-                      },
-                      child: const Text(
-                        ParamTypes.appNameGitHub,
-                        style: TextStyle(color: Colors.white),
-                      ))),
+              // Padding(
+              //     padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
+              //     child: ElevatedButton(
+              //         style: ElevatedButton.styleFrom(
+              //             elevation: buttonElevation,
+              //             backgroundColor:
+              //                 const Color.fromARGB(255, 101, 121, 156)),
+              //         onPressed: () {
+              //           _openApplication(ParamTypes.appNameGitHub);
+              //         },
+              //         child: const Text(
+              //           ParamTypes.appNameGitHub,
+              //           style: TextStyle(color: Colors.white),
+              //         ))),
               Padding(
                   padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
                   child: ElevatedButton(
@@ -244,20 +244,20 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                         ParamTypes.appNameBash,
                         style: TextStyle(color: Colors.white),
                       ))),
-              Padding(
-                  padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          elevation: buttonElevation,
-                          backgroundColor:
-                              const Color.fromARGB(255, 101, 121, 156)),
-                      onPressed: () {
-                        _openApplication(ParamTypes.appNameDocker);
-                      },
-                      child: const Text(
-                        ParamTypes.appNameDocker,
-                        style: TextStyle(color: Colors.white),
-                      ))),
+              // Padding(
+              //     padding: const EdgeInsets.fromLTRB(40, 85, 40,65),
+              //     child: ElevatedButton(
+              //         style: ElevatedButton.styleFrom(
+              //             elevation: buttonElevation,
+              //             backgroundColor:
+              //                 const Color.fromARGB(255, 101, 121, 156)),
+              //         onPressed: () {
+              //           _openApplication(ParamTypes.appNameDocker);
+              //         },
+              //         child: const Text(
+              //           ParamTypes.appNameDocker,
+              //           style: TextStyle(color: Colors.white),
+              //         ))),
             ]),
         persistentFooterButtons: <Widget>[
           TextButton(

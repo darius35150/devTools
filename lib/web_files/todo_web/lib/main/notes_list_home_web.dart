@@ -125,6 +125,9 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
                       controller: textFormFieldController,
                       style: const TextStyle(fontFamily: "Nunito"),
                       cursorColor:  const Color.fromARGB(255, 101, 121, 156),
+                      onSubmitted: (value) =>{
+                        _saveData()
+                      },
                       decoration: const InputDecoration(
                           border: UnderlineInputBorder(),
                           labelText: "Enter item name"),

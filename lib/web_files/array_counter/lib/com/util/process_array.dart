@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ProcessArray {
   int processArray(TextEditingController controller) {
     int length = 0;
-    if(controller.text.isEmpty){
+    if(controller.text.isNotEmpty){
       List<dynamic> list = json.decode(controller.text);
     length = list.length;
     }

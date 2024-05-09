@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:dev_tools/ms_files/app_run/app_runner.dart';
+import 'package:dev_tools/ms_files/array_counter/lib/com/pages/counter_home.dart';
 import 'package:dev_tools/ms_files/converter/lib/converter_app.dart';
 import 'package:dev_tools/ms_files/todo/lib/main/notes_list_home.dart';
+import 'package:dev_tools/web_files/array_counter/lib/com/pages/counter_home_web.dart';
 import 'package:dev_tools/web_files/converter_web/lib/converter_app_web.dart';
 import 'package:dev_tools/web_files/home_web/home_web.dart';
 import 'package:dev_tools/web_files/todo_web/lib/main/notes_list_home_web.dart';
@@ -44,6 +46,7 @@ class DevToolsAppWindows extends StatelessWidget {
       title: 'Dev Tools',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 60, 62, 63),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -53,6 +56,7 @@ class DevToolsAppWindows extends StatelessWidget {
         "/notes":(context) => NotesListHome(),
         "/converter":(context) => const ConverterApp(),
         "/apps":(context) => const AppRunnerHome(title: 'App Runner 2.0'),
+        "/counter":(context) => const CounterHome()
       },
       initialRoute: "/home",
     );
@@ -69,6 +73,7 @@ class DevToolsAppWeb extends StatelessWidget {
       title: 'Dev Tools',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 60, 62, 63),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -77,6 +82,7 @@ class DevToolsAppWeb extends StatelessWidget {
         "/webhome": (context) => const HomeWeb(),
         "/webnotes":(context) => NotesListHomeWeb(),
         "/webconverter":(context) => const ConverterAppWeb(),
+        "/webcounter":(context) => const CounterHomeWeb()
       },
       initialRoute: "/webhome",
     );

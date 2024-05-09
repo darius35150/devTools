@@ -11,7 +11,7 @@ class ConverterAppWeb extends StatelessWidget {
     return MaterialApp(
         title: "Model To Dto Converter",
         theme: ThemeData(
-          scaffoldBackgroundColor: globalColor,
+          scaffoldBackgroundColor: const Color.fromARGB(255, 60, 62, 63),
           useMaterial3: true
         ),
         debugShowCheckedModeBanner: false,
@@ -49,7 +49,20 @@ class ConverterAppWeb extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context,"/webnotes");
             },
-          )
+          ),
+          IconButton(
+              tooltip: "Array Counter",
+              color: Colors.white,
+              highlightColor: Colors.amber,
+              icon: const Icon(
+                Icons.plus_one,
+                size: 30,
+              ),
+              iconSize: 30,
+              onPressed: () {
+                Navigator.pushNamed(context, "/webcounter");
+              },
+            )
         ],
           ),
           body: const ConverterHomeWeb(),

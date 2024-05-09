@@ -40,6 +40,19 @@ class HomeWeb extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, "/webconverter");
               },
+            ),
+            IconButton(
+              tooltip: "Array Counter",
+              color: Colors.white,
+              highlightColor: Colors.amber,
+              icon: const Icon(
+                Icons.plus_one,
+                size: 30,
+              ),
+              iconSize: 30,
+              onPressed: () {
+                Navigator.pushNamed(context, "/webcounter");
+              },
             )
           ],
         ),
@@ -47,7 +60,7 @@ class HomeWeb extends StatelessWidget {
             child: Text(
           "Welcome to the Dev Tools Dashboard",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 25,
           ),
         )));

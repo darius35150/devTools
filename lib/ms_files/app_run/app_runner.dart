@@ -110,6 +110,19 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
               onPressed: () {
                 Navigator.pushNamed(context, "/converter");
               },
+            ),
+            IconButton(
+              tooltip: "Array Counter",
+              color: Colors.white,
+              highlightColor: Colors.amber,
+              icon: const Icon(
+                Icons.plus_one,
+                size: 30,
+              ),
+              iconSize: 30,
+              onPressed: () {
+                Navigator.pushNamed(context, "/counter");
+              },
             )
           ],
         ),
@@ -261,7 +274,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
             ]),
         persistentFooterButtons: <Widget>[
           TextButton(
-              child: const Text(ParamTypes.appClearTeamsCache),
+              child: const Text(
+                ParamTypes.appClearTeamsCache,
+                style: TextStyle(color: Colors.white),),
               onPressed: () async {
                 bool restartShutdownLogoff = await restartOrShutdown(
                     ParamTypes.promptClearTeamsCache,
@@ -269,9 +284,12 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                 if (restartShutdownLogoff) {
                   _openApplication(ParamTypes.appClearTeamsCache);
                 }
-              }),
+              }
+          ),
           TextButton(
-              child: const Text(ParamTypes.appDeleteM2Repo),
+              child: const Text(
+                ParamTypes.appDeleteM2Repo,
+                style: TextStyle(color: Colors.white),),
               onPressed: () async {
                 bool restartShutdownLogoff = await restartOrShutdown(
                     ParamTypes.promptDeleteM2Repository,
@@ -281,7 +299,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                 }
               }),
           TextButton(
-              child: const Text(ParamTypes.appActionRestart),
+              child: const Text(
+                ParamTypes.appActionRestart,
+                style: TextStyle(color: Colors.white),),
               onPressed: () async {
                 bool restartShutdownLogoff = await restartOrShutdown(
                     ParamTypes.promptTextRestart, ParamTypes.appActionRestart);
@@ -290,7 +310,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                 }
               }),
           TextButton(
-              child: const Text(ParamTypes.appActionShutdown),
+              child: const Text(
+                ParamTypes.appActionShutdown,
+                style: TextStyle(color: Colors.white),),
               onPressed: () async {
                 bool restartShutdownLogoff = await restartOrShutdown(
                     ParamTypes.promptTextShutdown,
@@ -300,7 +322,9 @@ class _AppRunnerHomeState extends State<AppRunnerHome>
                 }
               }),
           TextButton(
-              child: const Text(ParamTypes.appActionLogoff),
+              child: const Text(
+                ParamTypes.appActionLogoff,
+                style: TextStyle(color: Colors.white),),
               onPressed: () async {
                 bool restartShutdownLogoff = await restartOrShutdown(
                     ParamTypes.promptTextLogoff, ParamTypes.appActionLogoff);

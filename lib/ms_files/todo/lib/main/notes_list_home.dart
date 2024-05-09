@@ -121,6 +121,19 @@ class _NotesListHome extends State<NotesListHome> {
               onPressed: () {
                 Navigator.pushNamed(context, "/converter");
               },
+            ),
+            IconButton(
+              tooltip: "Array Counter",
+              color: Colors.white,
+              highlightColor: Colors.amber,
+              icon: const Icon(
+                Icons.plus_one,
+                size: 30,
+              ),
+              iconSize: 30,
+              onPressed: () {
+                Navigator.pushNamed(context, "/counter");
+              },
             )
           ],
         ),
@@ -135,14 +148,17 @@ class _NotesListHome extends State<NotesListHome> {
                             primary: Color.fromARGB(255, 101, 121, 156))),
                     child: TextField(
                       controller: textFormFieldController,
-                      style: const TextStyle(fontFamily: "Nunito"),
+                      style: const TextStyle(
+                        fontFamily: "Nunito",
+                        color: Colors.white),
                       cursorColor: const Color.fromARGB(255, 101, 121, 156),
                       onSubmitted: (value) =>{
                            _saveData()
                       },
                       decoration: const InputDecoration(
                           border: UnderlineInputBorder(),
-                          labelText: "Enter item name"),
+                          labelText: "Enter item name",
+                          labelStyle: TextStyle(color: Colors.white)),
                     ))),
           ]),
           BootstrapRow(children: [

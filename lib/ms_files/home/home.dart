@@ -52,6 +52,19 @@ class Home extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, "/converter");
             },
+          ),
+          IconButton(
+            tooltip: "Array Counter",
+            color: Colors.white,
+            highlightColor: Colors.amber,
+            icon: const Icon(
+              Icons.plus_one,
+              size: 30,
+            ),
+            iconSize: 30,
+            onPressed: () {
+              Navigator.pushNamed(context, "/counter");
+            },
           )
         ],
       ),
@@ -60,7 +73,7 @@ class Home extends StatelessWidget {
 
           "Welcome to the Dev Tools Dashboard",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 25,
         ),
       )

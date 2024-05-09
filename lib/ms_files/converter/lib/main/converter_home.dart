@@ -92,6 +92,7 @@ class _ConverterHome extends State<ConverterHome> {
             maxLines: 10,
             controller: inputTextFormFieldController,
             decoration: const InputDecoration(
+                hintStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(),
                 hintText: 'Place model code here'),
             style: const TextStyle(color: Colors.black),
@@ -153,6 +154,7 @@ class _ConverterHome extends State<ConverterHome> {
               maxLines: 10,
               controller: outputTexTFormFieldController,
               decoration: const InputDecoration(
+                  hintStyle: TextStyle(color: Colors.white),
                   border: OutlineInputBorder(),
                   hintText: 'Converted Dto Code shows here'))),
       const SizedBox(

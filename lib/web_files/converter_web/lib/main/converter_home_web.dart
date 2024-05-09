@@ -87,10 +87,11 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
               maxLines: 10,
               controller: inputTextFormFieldController,
               decoration: const InputDecoration(
+                  hintStyle: TextStyle(color: Colors.white),
                   border: OutlineInputBorder(),
                   hintText: 'Place model code here'),
               style: const TextStyle(
-                color: Colors.black
+                color: Colors.white
               ),)),
       const SizedBox(height: 4),
       Row(
@@ -145,10 +146,12 @@ class _ConverterHomeWeb extends State<ConverterHomeWeb> {
       Container(
           margin: const EdgeInsets.fromLTRB(0, 55, 0, 0),
           child: TextField(
+              style: const TextStyle(color: Colors.white),
               keyboardType: TextInputType.multiline,
               maxLines: 10,
               controller: outputTexTFormFieldController,
               decoration: const InputDecoration(
+                  hintStyle: TextStyle(color: Colors.white),
                   border: OutlineInputBorder(), hintText: 'Converted Dto Code shows here'))),
       
       const SizedBox(height: 4,),

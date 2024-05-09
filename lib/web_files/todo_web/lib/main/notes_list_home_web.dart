@@ -108,7 +108,20 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
                 onPressed: () {
                   Navigator.pushNamed(context,"/webconverter");
                 },
-              )
+              ),
+              IconButton(
+              tooltip: "Array Counter",
+              color: Colors.white,
+              highlightColor: Colors.amber,
+              icon: const Icon(
+                Icons.plus_one,
+                size: 30,
+              ),
+              iconSize: 30,
+              onPressed: () {
+                Navigator.pushNamed(context, "/webcounter");
+              },
+            )
         ],
         ),
         body: BootstrapContainer(fluid: false, children: [
@@ -123,12 +136,13 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
                             const ColorScheme.light(primary: Color.fromARGB(255, 101, 121, 156))),
                     child: TextField(
                       controller: textFormFieldController,
-                      style: const TextStyle(fontFamily: "Nunito"),
+                      style: const TextStyle(fontFamily: "Nunito", color: Colors.white),
                       cursorColor:  const Color.fromARGB(255, 101, 121, 156),
                       onSubmitted: (value) =>{
                         _saveData()
                       },
                       decoration: const InputDecoration(
+                          labelStyle: TextStyle(color: Colors.white),
                           border: UnderlineInputBorder(),
                           labelText: "Enter item name"),
                     ))),

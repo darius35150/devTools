@@ -95,7 +95,7 @@ class _ConverterHome extends State<ConverterHome> {
                 hintStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(),
                 hintText: 'Place model code here'),
-            style: const TextStyle(color: Colors.black),
+            style: const TextStyle(color: Colors.white),
           )),
       const SizedBox(height: 4),
       Row(
@@ -153,6 +153,9 @@ class _ConverterHome extends State<ConverterHome> {
               keyboardType: TextInputType.multiline,
               maxLines: 10,
               controller: outputTexTFormFieldController,
+              style: const TextStyle(
+                color: Colors.white
+              ),
               decoration: const InputDecoration(
                   hintStyle: TextStyle(color: Colors.white),
                   border: OutlineInputBorder(),

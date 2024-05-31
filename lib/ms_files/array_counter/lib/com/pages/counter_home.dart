@@ -32,7 +32,7 @@ class _CounterHome extends State<CounterHome> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 101, 121, 156),
-        title: const Text("Dev Tools",
+        title: const Text("Dev Tools - Array Counter",
         style: TextStyle(
           color: Colors.white
         ),),

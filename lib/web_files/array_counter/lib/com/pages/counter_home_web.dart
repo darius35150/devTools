@@ -33,7 +33,7 @@ class _CounterHomeWeb extends State<CounterHomeWeb> {
           automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 101, 121, 156),
           title: const Text(
-            "Dev Tools",
+            "Dev Tools - Array Counter",
             style: TextStyle(color: Colors.white),
           ),
           actions: [

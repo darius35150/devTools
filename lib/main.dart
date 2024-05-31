@@ -55,7 +55,7 @@ class DevToolsAppWindows extends StatelessWidget {
         "/home": (context) => const Home(),
         "/notes":(context) => NotesListHome(),
         "/converter":(context) => const ConverterApp(),
-        "/apps":(context) => const AppRunnerHome(title: 'App Runner 2.0'),
+        "/apps":(context) => const AppRunnerHome(title: 'Dev Tools - App Runner 2.0'),
         "/counter":(context) => const CounterHome()
       },
       initialRoute: "/home",

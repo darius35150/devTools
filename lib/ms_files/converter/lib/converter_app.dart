@@ -19,7 +19,7 @@ class ConverterApp extends StatelessWidget {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             backgroundColor: const Color.fromARGB(255, 101, 121, 156),
-            title: const Text("Model To Dto Converter",
+            title: const Text("Dev Tools - Model To Dto Converter",
             style: TextStyle(
               color: Colors.white
             ),),

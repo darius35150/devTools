@@ -11,7 +11,7 @@ class HomeWeb extends StatelessWidget {
           automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 101, 121, 156),
           title: const Text(
-            "Dev Tools - Notes",
+            "Dev Tools",
             style: TextStyle(color: Colors.white),
           ),
           actions: [

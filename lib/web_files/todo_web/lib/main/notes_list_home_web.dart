@@ -78,7 +78,7 @@ class _NotesListHomeWeb extends State<NotesListHomeWeb> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 101, 121, 156),
-          title: const Text("Notes",
+          title: const Text("Dev Tools - Notes",
             style: TextStyle(
               color: Colors.white
             ),),

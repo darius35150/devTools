@@ -79,7 +79,7 @@ class _NotesListHome extends State<NotesListHome> {
           automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 101, 121, 156),
           title: const Text(
-            "Notes",
+            "Dev Tools - Notes",
             style: TextStyle(color: Colors.white),
           ),
           actions: [

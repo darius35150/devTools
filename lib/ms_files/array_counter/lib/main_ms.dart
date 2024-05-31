@@ -12,7 +12,7 @@ class ArrayCounterMSApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Array Counter',
+      title: 'Dev Tools - Array Counter',
       initialRoute: "/counter",
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromARGB(255, 60, 62, 63),

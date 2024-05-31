@@ -9,7 +9,7 @@ class ConverterAppWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "Model To Dto Converter",
+        title: "Dev Tools - Model To Dto Converter",
         theme: ThemeData(
           scaffoldBackgroundColor: const Color.fromARGB(255, 60, 62, 63),
           useMaterial3: true
